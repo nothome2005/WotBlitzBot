@@ -78,7 +78,7 @@ async def command_start(msg: types.Message):
             pass
 @dp.message_handler(commands = ['help'])
 async def command_help(msg: types.Message):
-    await bot.send_message('Вместо того, чтобы прокалазывать по кнопкам, можно ввести такую команду:')
+    await bot.send_message(msg.from_user.id,'Вместо того, чтобы прокалазывать по кнопкам, можно ввести такую команду:')
 
 @dp.message_handler(commands = ['statist'])
 async def command_send_group(msg: types.Message):
