@@ -24,7 +24,7 @@ def ping_timer():
         req.get_request_simple('https://git.heroku.com/wotblitzgram.git')
         print('Herok wake up!')
         print(int(str(time_now_zone.hour) + str(time_now_zone.minute)))
-        sleep((60*15))
+        sleep((60*1))
         time_now_zone = datetime.datetime.now(pytz.timezone("Europe/Kiev"))
     print('Heroku sleep!')
     
