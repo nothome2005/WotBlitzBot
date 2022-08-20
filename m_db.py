@@ -33,7 +33,7 @@ def prop(text,username):
     #except:
     #    pass
     #prop_doc.insert_one({'_id':username,'Message': text})
-def users_list(chat):
+#def users_list(chat):
     #coll.insert_one({'_id': 1010101,'chat_list':[chat]})
     if chat in coll.find_one({'_id':1010101})['chat_list']:
         print(f'Element {chat} already in list')
