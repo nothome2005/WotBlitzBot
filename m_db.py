@@ -16,7 +16,8 @@ def check_in(user_id,nickname,region,username):
         '_id' : user_id,
         'name' : nickname,
         'region' : region,
-        'telegram_user' : username
+        'telegram_user' : username,
+        'date': datetime.datetime.now(pytz.timezone("Europe/Kiev"))
         }
         coll.insert_one(user)
 def prop(text,username):
