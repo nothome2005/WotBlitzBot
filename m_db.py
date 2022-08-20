@@ -2,7 +2,7 @@ import pymongo
 import datetime
 import pytz
 
-dt_format = "%d-%m-%Y %H:%M:%S"
+dt_format = "%d-%m-%Y %H:%M"
 client = pymongo.MongoClient("mongodb+srv://Fit4a:S8Lqaagemi98rTt@cluster0.dzzqz.mongodb.net/Tele_db?retryWrites=true&w=majority")
 db = client.Tele_db
 coll = db.users
