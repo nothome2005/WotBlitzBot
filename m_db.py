@@ -2,6 +2,7 @@ import pymongo
 import datetime
 import pytz
 
+dt_format = "%d-%m-%Y %H:%M:%S"
 client = pymongo.MongoClient("mongodb+srv://Fit4a:S8Lqaagemi98rTt@cluster0.dzzqz.mongodb.net/Tele_db?retryWrites=true&w=majority")
 db = client.Tele_db
 coll = db.users
@@ -19,7 +20,7 @@ def check_in(user_id,nickname,region,username):
         'name' : nickname,
         'region' : region,
         'telegram_user' : username,
-        'date': datetime.datetime.now(pytz.timezone("Europe/Kiev"))
+        'date': datetime.datetime.now(pytz.timezone("Europe/Kiev")).strftime(dt_format)
         }
         coll.insert_one(user)
 def prop(text,username):
