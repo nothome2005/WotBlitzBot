@@ -118,7 +118,7 @@ async def bot_mes(msg: types.Message):
                region = 'eu'
             if msg.text == 'NA':
                 region = 'na'
-            if msg.text == 'Asia:
+            if msg.text == 'Asia':
                 region = 'asia'
             await bot.send_message(msg.from_user.id,'Введите свой ник:', reply_markup = nav.ReplyKeyboardRemove())
             step = 3
