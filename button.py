@@ -12,7 +12,9 @@ mainmenu = ReplyKeyboardMarkup(resize_keyboard = True,row_width = 2).add(button_
 #----------region------------
 rus = KeyboardButton('RUS 🇷🇺')
 eu = KeyboardButton('EU 🇪🇺')
-region = ReplyKeyboardMarkup(resize_keyboard = True,one_time_keyboard = True).add(rus,eu)
+na = KeyboardButton('NA')
+asia = KeyboardButton('Asia')
+region = ReplyKeyboardMarkup(resize_keyboard = True,row_width = 2,one_time_keyboard = True).add(rus,eu,na,asia)
 
 #-----------share-----------
 share_menu = InlineKeyboardMarkup(row_width = 2)
