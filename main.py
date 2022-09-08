@@ -111,14 +111,15 @@ async def bot_mes(msg: types.Message):
         elif msg.text == 'Статистика':
             await bot.send_message(msg.from_user.id, "Выберете регион сервера, на котором зарегистрирован аккаунт".format(msg.from_user),reply_markup = nav.region)
             step = 2
-        elif msg.text == 'RUS 🇷🇺' and step == 2:
-            region = 'ru'
-            print(region)
-            await bot.send_message(msg.from_user.id,'Введите свой ник:', reply_markup = nav.ReplyKeyboardRemove())
-            step = 3
-        elif msg.text == 'EU 🇪🇺' and step == 2:
-            region = 'eu'
-            print(region)
+        elif step == 2:
+            if msg.text == 'RUS 🇷🇺':
+                region = 'eu'
+            if msg.text == 'EU 🇪🇺':
+               region = 'eu'
+            if msg.text == 'NA':
+                region = 'na'
+            if msg.text == 'Asia:
+                region = 'asia'
             await bot.send_message(msg.from_user.id,'Введите свой ник:', reply_markup = nav.ReplyKeyboardRemove())
             step = 3
         elif step == 3:
